@@ -1407,3 +1407,55 @@ img {
 .pagination__info {
   font-size: 1rem;
 }
+
+/* 404 Error Page */
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.error__container {
+  max-width: 600px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error__title {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.error__subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.error__description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.button--flex--404 {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.button--flex .button__icon {
+  margin-left: 0.5rem;
+}
