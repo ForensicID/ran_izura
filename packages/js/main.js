@@ -221,3 +221,71 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+// For Projek
+const projects = [
+  // { img: '/packages/images/', name: 'Project 1', description: 'Description of Project 1.' },
+  { img: '/packages/images/moodle.png', name: 'Create LMS for elementary school exams', description: 'Based on Moodle with Moodle, web-server Nginx, and database MariaDB.' },
+  { img: '/packages/images/mikrodik.png', name: 'Router Configuration(Routing, Forwarding)', description: 'Just routing into a destination and forward it.' },
+  { img: '/packages/images/ssl.png', name: 'Create ssl and basic security for several school pages', description: 'Vocational High School 2 Yogyakarta.' },
+  { img: '/packages/images/proxmox.png', name: 'Troubleshooting Clustering error in DataCenter', description: 'Proxmox Clustering Proxy error.' },
+  { img: '/packages/images/terrapom.jpg', name: 'Infrastructure automation with Terraform', description: 'Using code to provision and manage infrastructure efficiently and consistently.' },
+  { img: '/packages/images/nas.png', name: 'Proxmox installation with clustering and NAS storage', description: 'Setting up Proxmox VE on multiple nodes to create a cluster, and configuring shared storage using NAS for high availability and efficient resource management.' },
+  { img: '/packages/images/load-balancing.jpg', name: 'Load Balancing Moodle E-Learning with High Availability', description: 'Distributing the load across multiple servers to ensure that the system remains responsive and available.' },
+  { img: '/packages/images/cicd', name: 'CI/CD pipeline (Continuous Integration/Continuous Deployment)', description: 'Automates the process of integrating code changes, running tests, and deploying applications.' },
+  { img: '/packages/images/postdov.gif', name: 'Mail server with Postfix & Dovecot(LKS DIY)', description: 'Configuring Postfix as the Mail Transfer Agent (MTA) to handle sending and receiving emails, and Dovecot as the IMAP/POP3 server to manage email retrieval and storage.' },
+  { img: '/packages/images/pgsql.png', name: 'CMS and LMS with PostgreSQL database(LKS DIY)', description: 'Systems to use PostgreSQL as the backend database for storing and managing content and user data.' },
+  { img: '/packages/images/bind.jpg', name: 'Setting DNS with bind9(LKS DIY)', description: 'BIND software to act as a DNS server, managing domain name resolution for your network.' },
+  { img: '/packages/images/CA.jpeg', name: 'Certification Authority(CA) Windows Server(LKS DIY)', description: 'Configuring Active Directory Certificate Services (AD CS) to manage digital certificates for your organization.' },
+  // Add more projects as needed
+];
+
+const projectsPerPage = 4;
+let currentPage = 1;
+
+function renderProjects() {
+  const projectsContainer = document.getElementById('projectsContainer');
+  projectsContainer.innerHTML = '';
+
+  const start = (currentPage - 1) * projectsPerPage;
+  const end = start + projectsPerPage;
+  const paginatedProjects = projects.slice(start, end);
+
+  paginatedProjects.forEach(project => {
+    const projectElement = document.createElement('div');
+    projectElement.classList.add('projects__content');
+    projectElement.innerHTML = `
+      <img src="${project.img}" alt="${project.name}" class="projects__img">
+      <h3 class="projects__name">${project.name}</h3>
+      <p class="projects__description">${project.description}</p>
+    `;
+    projectsContainer.appendChild(projectElement);
+  });
+
+  document.getElementById('paginationInfo').textContent = `Page ${currentPage} of ${Math.ceil(projects.length / projectsPerPage)}`;
+  document.getElementById('prevPage').disabled = currentPage === 1;
+  document.getElementById('nextPage').disabled = currentPage === Math.ceil(projects.length / projectsPerPage);
+}
+
+function scrollToProjects() {
+  const projectsSection = document.querySelector('.projects');
+  projectsSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+document.getElementById('prevPage').addEventListener('click', () => {
+  if (currentPage > 1) {
+    currentPage--;
+    renderProjects();
+    scrollToProjects();
+  }
+});
+
+document.getElementById('nextPage').addEventListener('click', () => {
+  if (currentPage < Math.ceil(projects.length / projectsPerPage)) {
+    currentPage++;
+    renderProjects();
+    scrollToProjects();
+  }
+});
+
+document.addEventListener('DOMContentLoaded', renderProjects);

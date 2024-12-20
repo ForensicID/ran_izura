@@ -1348,3 +1348,62 @@ img {
     margin-right: var(--mb-1-5);
   } */
 }
+
+/* Projects Section */
+.projects__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem; /* Reduced gap between project items */
+}
+
+.projects__content {
+  background-color: #fff;
+  padding: 1rem; /* Reduced padding */
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.projects__img {
+  width: auto;
+  height: 9.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem; /* Reduced margin */
+}
+
+.projects__name {
+  font-size: 1.10rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.projects__description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem; /* Reduced margin */
+}
+
+.pagination__button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0.25rem 0.5rem; /* Reduced padding */
+  margin: 0 0.25rem; /* Reduced margin */
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.pagination__button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination__info {
+  font-size: 1rem;
+}
