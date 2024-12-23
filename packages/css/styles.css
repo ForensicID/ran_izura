@@ -457,6 +457,46 @@ img {
   justify-content: center;
 }
 
+/* Achievements Section */
+.achievements {
+  padding: 2rem 0;
+}
+
+.achievements__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements__item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 1.5rem; /* Match padding with About section */
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.achievements__icon {
+  font-size: 2rem;
+  color: var(--first-color); /* Match color with About section */
+  margin-right: 1rem;
+}
+
+.achievements__title {
+  font-size: 1.01rem; /* Adjust to a smaller font size */
+  /* font-size: var(--normal-font-size); */
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  margin-bottom: 0.25rem;
+}
+
+.achievements__description {
+  font-size: var(--small-font-size); /* Match font size with About section */
+  color: var(--text-color); /* Match color with About section */
+}
+
 /*==================== SKILLS ====================*/
 
 .skills__container {
