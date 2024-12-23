@@ -1496,6 +1496,59 @@ img {
   cursor: pointer;
 }
 
+/*==================== BLOG ====================*/
+.blog__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.blog__card {
+  display: flex;
+  background-color: var(--container-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.blog__img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+}
+
+.blog__content {
+  display: flex;
+  align-items: center;
+}
+
+.blog__text {
+  padding: 1rem;
+}
+
+.blog__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+
+.blog__description {
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.blog__button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: var(--small-font-size);
+  transition: background-color 0.3s;
+}
+
+.blog__button:hover {
+  background-color: var(--first-color-alt);
+}
+
 .button--flex .button__icon {
   margin-left: 0.5rem;
 }
