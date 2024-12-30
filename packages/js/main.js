@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const options = {
-      strings: ["IT Enthusias", "Game Lover"],
+      strings: ["IT Enthusiast", "Game Lover"],
       typeSpeed: 100, // Kecepatan mengetik (ms per karakter)
       backSpeed: 50,  // Kecepatan menghapus
       backDelay: 2000, // Jeda sebelum teks berikutnya
