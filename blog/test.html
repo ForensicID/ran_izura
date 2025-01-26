@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--==================== CSS ====================-->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .header {
+            background-color: #ffffff;
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header .nav__logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .blog__container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .blog__card {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog__img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .blog__content {
+            flex: 1;
+        }
+
+        .blog__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .blog__description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .blog__meta {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .blog__button {
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .blog__button:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <title>Randi's Blog</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Randi Dwi Nur</a>
+        </nav>
+    </header>
+
+    <!--==================== BLOG ====================-->
+    <main>
+        <section class="blog__container">
+            <article class="blog__card">
+                <img src="../packages/images/bind.jpg" alt="Blog Image 1" class="blog__img">
+                <div class="blog__content">
+                    <h3 class="blog__title">The 5 paid subscriptions I actually use in 2025 as a Staff Software Engineer</h3>
+                    <p class="blog__meta">Jan 8, 2025 · 6.7K views · 142 comments</p>
+                    <p class="blog__description">Tools I use that are cheaper than Netflix.</p>
+                    <a href="#" class="blog__button">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog__card">
+                <img src="../packages/images/bash.jpg" alt="Blog Image 2" class="blog__img">
+                <div class="blog__content">
+                    <h3 class="blog__title">12 Bash Scripts Every DevOps Engineer Should Automate</h3>
+                    <p class="blog__meta">Oct 23, 2024 · 801 views · 14 comments</p>
+                    <p class="blog__description">Let’s dive right into it.</p>
+                    <a href="#" class="blog__button">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog__card">
+                <img src="../packages/images/k8s.jpg" alt="Blog Image 3" class="blog__img">
+                <div class="blog__content">
+                    <h3 class="blog__title">Kubernetes 10 Questions to Test Your Understanding of K8s</h3>
+                    <p class="blog__meta">Nov 16, 2024 · 349 views · 1 comment</p>
+                    <p class="blog__description">Test your Kubernetes knowledge with these 10 questions.</p>
+                    <a href="#" class="blog__button">Read More</a>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

@@ -471,7 +471,8 @@ img {
 .achievements__item {
   display: flex;
   align-items: center;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: var(--container-color);
   padding: 1.5rem; /* Match padding with About section */
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -1397,7 +1398,8 @@ img {
 }
 
 .projects__content {
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: var(--container-color);
   padding: 1rem; /* Reduced padding */
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
