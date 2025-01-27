@@ -289,3 +289,68 @@ document.getElementById('nextPage').addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', renderProjects);
+
+const blogs = [
+  {
+    id: "blog1",
+    title: "Blog Post 1",
+    description: "This is a short description of blog post 1.",
+    image: "../packages/images/bind.jpg",
+    link: "path/to/blog1.html",
+    minRead: "5 min read"
+  },
+  {
+    id: "blog2",
+    title: "Blog Post 2",
+    description: "This is a short description of blog post 2.",
+    image: "path/to/image2.jpg",
+    link: "path/to/blog2.html",
+    minRead: "5 min read"
+  },
+  {
+    id: "blog3",
+    title: "Blog Post 3",
+    description: "This is a short description of blog post 3.",
+    image: "path/to/image3.jpg",
+    link: "path/to/blog3.html",
+    minRead: "5 min read"
+  }
+];
+
+// Views JS
+document.addEventListener("DOMContentLoaded", () => {
+  const blogContainer = document.querySelector(".blog__container");
+
+  blogs.forEach(blog => {
+    const blogCard = document.createElement("article");
+    blogCard.classList.add("blog__card");
+
+    blogCard.innerHTML = `
+      <div class="blog__content">
+        <img src="${blog.image}" alt="${blog.title}" class="blog__img">
+        <div class="blog__text">
+          <h3 class="blog__title">${blog.title}</h3>
+          <p class="blog__description">${blog.description}</p>
+          <p class="blog__meta">${blog.minRead} · <span class="blog__views" id="views-${blog.id}">0 views</span></p>
+          <a href="${blog.link}" class="blog__button">Read More</a>
+        </div>
+      </div>
+    `;
+
+    blogContainer.appendChild(blogCard);
+
+    // Fetch views for each blog post
+    fetchViews(blog.id);
+  });
+
+  // Function to fetch views from the server
+  async function fetchViews(blogId) {
+    try {
+      const response = await fetch(`http://localhost:3000/api/views?blogId=${blogId}`);
+      const data = await response.json();
+      document.getElementById(`views-${blogId}`).textContent = `${data.views} views`;
+    } catch (error) {
+      console.error("Error fetching views:", error);
+    }
+  }
+});

@@ -23,6 +23,28 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: |
+        cd packages/js
+        npm install
+
+    - name: Run backend server
+      run: |
+        cd packages/js
+        nohup node server.js &
+
   deploy:
     environment:
       name: github-pages
