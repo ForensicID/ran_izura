@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://izura.my.id/sitemap.xml
